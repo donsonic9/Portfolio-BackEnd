@@ -28,6 +28,12 @@ public class HeroService implements IHeroService {
     public void borrarHero(Long id) {
         heroRepo.deleteById(id);
     }
+    
+    @Override
+    public Hero buscarHero(Long id) {
+        Hero herobus = heroRepo.findById(id).orElse(null);
+        return herobus;
+    }
 
     @Override
     public void editarHero(Hero her) {
@@ -43,5 +49,7 @@ public class HeroService implements IHeroService {
             throw new RuntimeException("Hero not found for id :: " + her.getId());
         }
     }
+
+    
     
 }

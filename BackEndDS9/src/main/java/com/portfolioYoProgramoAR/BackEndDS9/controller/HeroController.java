@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@CrossOrigin (origins = "*")
+@CrossOrigin (origins = "http://localhost:4200/")
 public class HeroController {
     
     @Autowired
@@ -26,6 +26,12 @@ public class HeroController {
     @ResponseBody
     public List <Hero> verHero () {
         return heroServ.verHero();
+    }
+    
+    @GetMapping ("/hero/buscar/{id}")
+    @ResponseBody
+    public Hero buscarHero(@PathVariable Long id){
+        return heroServ.buscarHero(id);
     }
     
     @PostMapping ("/hero/crear")
@@ -38,7 +44,7 @@ public class HeroController {
         heroServ.borrarHero(id);
     }
     
-    @PutMapping ("/hero/editar")
+    @PutMapping ("/hero/editar/")
     public void editarHero(@RequestBody Hero her) {
         heroServ.editarHero(her);
     }

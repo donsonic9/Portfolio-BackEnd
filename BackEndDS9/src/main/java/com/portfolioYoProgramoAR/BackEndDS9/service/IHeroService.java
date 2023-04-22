@@ -13,6 +13,8 @@ public interface IHeroService {
     
     public void borrarHero(Long id);
     
+    public Hero buscarHero(Long id);
+    
     public void editarHero(Hero her);
     
 }
