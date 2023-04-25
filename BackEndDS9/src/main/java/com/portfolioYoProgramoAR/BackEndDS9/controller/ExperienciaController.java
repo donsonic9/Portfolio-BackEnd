@@ -31,7 +31,7 @@ public class ExperienciaController {
         expeServ.crearExperiencia(expe);
     }
     
-    @DeleteMapping ("/experiencia/borrar/{id}")
+    @DeleteMapping ("/experiencia/borrar{id}")
     public void borrarExperiencia (@PathVariable Long id) {
         expeServ.borrarExperiencia(id);
     }
