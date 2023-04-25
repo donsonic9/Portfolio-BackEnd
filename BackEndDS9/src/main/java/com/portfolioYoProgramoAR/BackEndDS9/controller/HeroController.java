@@ -28,11 +28,12 @@ public class HeroController {
         return heroServ.verHero();
     }
     
-    @GetMapping ("/hero/buscar/{id}")
+    @GetMapping ("hero/buscar/{id}")
     @ResponseBody
     public Hero buscarHero(@PathVariable Long id){
         return heroServ.buscarHero(id);
     }
+    
     
     @PostMapping ("/hero/crear")
     public void crearHero(@RequestBody Hero her) {

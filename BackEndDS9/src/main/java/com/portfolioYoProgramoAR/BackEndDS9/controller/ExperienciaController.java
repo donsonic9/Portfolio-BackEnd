@@ -26,7 +26,7 @@ public class ExperienciaController {
         return expeServ.verExperiencia();
     }
     
-    @PostMapping ("/experiencia/crear")
+    @PostMapping ("/experiencia/crear/")
     public void crearExperiencia(@RequestBody Experiencia expe) {
         expeServ.crearExperiencia(expe);
     }
@@ -36,7 +36,7 @@ public class ExperienciaController {
         expeServ.borrarExperiencia(id);
     }
     
-    @PutMapping ("/experiencia/editar")
+    @PutMapping ("/experiencia/editar/")
     public void editarExperiencia(@RequestBody Experiencia expe) {
         expeServ.editarExperiencia(expe);
     }

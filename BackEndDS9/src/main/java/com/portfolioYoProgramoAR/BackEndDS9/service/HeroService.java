@@ -34,6 +34,7 @@ public class HeroService implements IHeroService {
         Hero herobus = heroRepo.findById(id).orElse(null);
         return herobus;
     }
+    
 
     @Override
     public void editarHero(Hero her) {
