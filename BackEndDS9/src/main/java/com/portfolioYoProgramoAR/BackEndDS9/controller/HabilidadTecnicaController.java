@@ -26,17 +26,17 @@ public class HabilidadTecnicaController {
         return habtecServ.verHabilidadTecnica();
     }
     
-    @PostMapping ("/habilidadtecnica/crear")
+    @PostMapping ("/habilidadtecnica/crear/")
     public void crearHabilidadTecnica(@RequestBody HabilidadTecnica habtec) {
         habtecServ.crearHabilidadTecnica(habtec);
     }
     
-    @DeleteMapping ("/habilidadtecnica/borrar/{id}")
+    @DeleteMapping ("/habilidadtecnica/borrar{id}")
     public void borrarHabilidadTecnica(@PathVariable Long id) {
         habtecServ.borrarHabilidadTecnica(id);
     }
     
-    @PutMapping ("/habilidadtecnica/editar")
+    @PutMapping ("/habilidadtecnica/editar/")
     public void editarHabilidadTecnica(@RequestBody HabilidadTecnica habtec) {
         habtecServ.editarHabilidadTecnica(habtec);
     }
