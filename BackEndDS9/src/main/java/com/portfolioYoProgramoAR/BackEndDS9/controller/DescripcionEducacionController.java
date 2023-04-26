@@ -36,7 +36,7 @@ public class DescripcionEducacionController {
         desceduServ.borrarDescripcionEducacion(id);
     }
     
-    @PutMapping ("/descripcioneducacion/editar")
+    @PutMapping ("/descripcioneducacion/editar/")
     public void editarDescripcionEducacion(@RequestBody DescripcionEducacion descedu) {
         desceduServ.editarDescripcionEducacion(descedu);
     }

@@ -26,17 +26,17 @@ public class EducacionController {
         return eduServ.verEducacion();
     }
     
-    @PostMapping ("/educacion/crear")
+    @PostMapping ("/educacion/crear/")
     public void crearEducacion(@RequestBody Educacion edu) {
         eduServ.crearEducacion(edu);
     }
     
-    @DeleteMapping ("/educacion/borrar/{id}")
+    @DeleteMapping ("/educacion/borrar{id}")
     public void borrarEducacion(@PathVariable Long id) {
         eduServ.borrarEducacion(id);
     }
     
-    @PutMapping ("/educacion/editar")
+    @PutMapping ("/educacion/editar/")
     public void editarEducacion(@RequestBody Educacion edu) {
         eduServ.editarEducacion(edu);
     }
