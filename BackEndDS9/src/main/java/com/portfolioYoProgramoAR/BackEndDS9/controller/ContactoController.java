@@ -26,7 +26,7 @@ public class ContactoController {
         return conServ.verContacto();
     }
     
-    @PostMapping ("/contacto/crear")
+    @PostMapping ("/contacto/crear/")
     public void crearContacto(@RequestBody Contacto con) {
         conServ.crearContacto(con);
     }
@@ -36,7 +36,7 @@ public class ContactoController {
         conServ.borrarContacto(id);
     }
     
-    @PutMapping ("/contacto/editar")
+    @PutMapping ("/contacto/editar/")
     public void editarContacto(@RequestBody Contacto con) {
         conServ.editarContacto(con);
     }

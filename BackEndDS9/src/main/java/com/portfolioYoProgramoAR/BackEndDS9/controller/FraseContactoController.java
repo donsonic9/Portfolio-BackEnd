@@ -36,7 +36,7 @@ public class FraseContactoController {
         fraconServ.borrarFraseContacto(id);
     }
     
-    @PutMapping ("/frasecontacto/editar")
+    @PutMapping ("/frasecontacto/editar/")
     public void editarFraseContacto(@RequestBody FraseContacto fracon) {
         fraconServ.editarFraseContacto(fracon);
     }

@@ -35,8 +35,11 @@ public class ContactoService implements IContactoService{
         
         if (conton.isPresent()) {
             Contacto contactmod = conton.get();
-            contactmod.setMedio_de_contacto(cont.getMedio_de_contacto());
-            contactmod.setUrl_medio(cont.getUrl_medio());
+            contactmod.setUrl_facebook(cont.getUrl_facebook());
+            contactmod.setUrl_github(cont.getUrl_github());
+            contactmod.setUrl_instagram(cont.getUrl_instagram());
+            contactmod.setUrl_linkedin(cont.getUrl_linkedin());
+            contactmod.setEmail(cont.getEmail());
             contactRepo.save(contactmod);
         } else {
             throw new RuntimeException ("Contacto not found for id: " + cont.getId());

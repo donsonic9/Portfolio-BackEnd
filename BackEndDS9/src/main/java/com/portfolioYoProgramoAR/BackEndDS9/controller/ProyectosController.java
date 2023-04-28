@@ -26,17 +26,17 @@ public class ProyectosController {
         return proyServ.verProyectos();
     }
     
-    @PostMapping ("/proyectos/crear")
+    @PostMapping ("/proyectos/crear/")
     public void crearProyectos(@RequestBody Proyectos proy) {
         proyServ.crearProyectos(proy);
     }
     
-    @DeleteMapping ("/proyectos/borrar/{id}")
+    @DeleteMapping ("/proyectos/borrar{id}")
     public void borrarProyectos(@PathVariable Long id) {
         proyServ.borrarProyectos(id);
     }
     
-    @PutMapping ("/proyectos/editar")
+    @PutMapping ("/proyectos/editar/")
     public void editarProyectos(@RequestBody Proyectos proy) {
         proyServ.editarProyectos(proy);
     }
