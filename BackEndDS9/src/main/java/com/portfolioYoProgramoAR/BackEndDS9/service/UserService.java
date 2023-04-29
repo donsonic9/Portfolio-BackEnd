@@ -36,7 +36,6 @@ public class UserService implements IUserService {
         if(opuser.isPresent()) {
             User usermod = opuser.get();
             usermod.setEmail(use.getEmail());
-            usermod.setUserName(use.getUserName());
             usermod.setPassword(use.getPassword());
             userRepo.save(usermod);
         } else {
