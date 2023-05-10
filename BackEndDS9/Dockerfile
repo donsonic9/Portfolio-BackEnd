@@ -1,6 +1,6 @@
 
-FROM amazoncorretto:17-alpine-jdk
+FROM amazoncorretto:8-alpine-jdk
 
-COPY BackendDS9/target/BackEndDS9-0.0.1-SNAPSHOT app.jar
+COPY target/BackEndDS9-0.0.1-SNAPSHOT.jar app.jar
 
 ENTRYPOINT ["java","-jar","/app.jar"]
